@@ -98,9 +98,9 @@ jobs:
 
       - name: Collect the arm64 APK
         run: |
-          src="$(ls dist/FlClash-*-android-arm64-v8a.apk | head -1)"
+          src="$(ls dist/FlClash-*-android-arm64.apk | head -1)"
           test -n "$src"
-          version="$(basename "$src" | sed -E 's/^FlClash-(.*)-android-arm64-v8a\.apk$/\1/')"
+          version="$(basename "$src" | sed -E 's/^FlClash-(.*)-android-arm64\.apk$/\1/')"
           mkdir -p out
           cp "$src" "out/FLC-$version-arm64-v8a.apk"
           ls -la out dist
